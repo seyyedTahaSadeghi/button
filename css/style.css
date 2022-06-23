@@ -1,0 +1,45 @@
+body {
+  height: 100vh;
+  background-color: rgb(57, 7, 104);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: tahoma;
+}
+.link-box {
+  width: 220px;
+  padding: 25px 0;
+  background-color: rgb(159, 88, 225, 0.3);
+  border-radius: 50px;
+  text-align: center;
+  border-top: 2px solid rgba(143, 80, 202, 0.942);
+  border-bottom: 2px solid rgba(143, 80, 202, 0.942);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.link-box a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+.link-box:hover a {
+  letter-spacing: 3px;
+}
+.link-box a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(225, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translateX(0);
+  transition: all 0.5s;
+}
+.link-box:hover a::before {
+  transform: skewX(45deg) translateX(200%);
+}
